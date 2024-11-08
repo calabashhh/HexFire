@@ -29,13 +29,16 @@
               container = L.DomUtil.get('fire'),
               map = L.map(container).setView([41, -87], 6);
 
+        
+
           L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
               attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           }).addTo(map);
 
           // Async call for data. Source URL is loaded from container element's
           // 'data-source' attribute.
-          d3.json(container.dataset.source, function(collection) {
+        
+          d3.json("https://github.com/calabashhh/HexFire/blob/main/firepoints.geojson", function(collection) {
               // When data arrives, create leaflet layer with custom style callback.
               L.hexLayer(collection, {
                   applyStyle: hex_style
