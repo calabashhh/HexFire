@@ -2,8 +2,8 @@
 <html>
    <head>
      <title>Hexbin Map</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.5/leaflet.css"/>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.5/leaflet.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
 
 
      <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -15,7 +15,7 @@
 
      <style type="text/css">
       html, body { margin: 0; padding: 0; height: 100%; }
-      #map { min-height: 90%; }
+      #map { min-height: 100%; }
       </style>
       <style>
       /* Optional: adjust the values below to change the appearance of the legend */
@@ -64,7 +64,7 @@
   * L.hexLayer is a leaflet function for creating hexbins based on the input data
   * The hexagons will be styled based on the hex_style function that is defined in the following code snippet
   */
- d3.json("https://github.com/calabashhh/HexFire/blob/main/firepoints.geojson", function(collection) {
+ d3.json("firepoints.geojson", function(collection) {
      L.hexLayer(collection, {
          applyStyle: hex_style,
          maxZoom: 20,
