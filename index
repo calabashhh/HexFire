@@ -54,7 +54,7 @@
            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
              attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
              id: 'mapbox.dark',
-             minZoom: 10,
+             minZoom: 6,
              accessToken: 'pk.eyJ1IjoiY3VyZW1hbmdvIiwiYSI6ImNpcTQ4cGFwbDAxbmVmd25vZGNiOTVzeGEifQ.GWZByYkIft6eMRha69C8nw'
            }).addTo(map);
 
@@ -63,10 +63,10 @@
   * L.hexLayer is a leaflet function for creating hexbins based on the input data
   * The hexagons will be styled based on the hex_style function that is defined in the following code snippet
   */
- d3.json("firepoints.geojson", function(collection) {
+ d3.json("https://github.com/calabashhh/HexFire/blob/main/firepoints.geojson", function(collection) {
      L.hexLayer(collection, {
          applyStyle: hex_style,
-         minZoom:10
+         minZoom:6
      }).addTo(map);
  });
 
