@@ -54,7 +54,8 @@
            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
              attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
              id: 'mapbox.dark',
-             minZoom: 6,
+             maxZoom: 20,
+             minZoom: 4,
              accessToken: 'pk.eyJ1IjoiY3VyZW1hbmdvIiwiYSI6ImNpcTQ4cGFwbDAxbmVmd25vZGNiOTVzeGEifQ.GWZByYkIft6eMRha69C8nw'
            }).addTo(map);
 
@@ -66,7 +67,8 @@
  d3.json("https://github.com/calabashhh/HexFire/blob/main/firepoints.geojson", function(collection) {
      L.hexLayer(collection, {
          applyStyle: hex_style,
-         minZoom:6
+         maxZoom: 20,
+         minZoom: 4
      }).addTo(map);
  });
 
