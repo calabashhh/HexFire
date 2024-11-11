@@ -57,7 +57,7 @@
   * L.hexLayer is a leaflet function for creating hexbins based on the input data
   * The hexagons will be styled based on the hex_style function that is defined in the following code snippet
   */
- d3.json("https://github.com/calabashhh/HexFire/blob/497fcec82113ad45ca8f05853f769ad0d788d8a8/firepoints.geojson", function(collection) {
+ d3.json("https://github.com/calabashhh/HexFire/raw/refs/heads/main/firepoints.js", function(collection) {
      L.hexLayer(collection, {
          applyStyle: hex_style,
          maxZoom: 20,
