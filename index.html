@@ -61,7 +61,7 @@
      L.hexLayer(collection, {
          applyStyle: hex_style,
          maxZoom: 20,
-         minZoom: 4
+         minZoom: 10
      }).addTo(map);
  });
 
@@ -70,7 +70,7 @@
   * and the colorbrewer color scheme: http://colorbrewer2.org/ (see image below for more info)
   */
  var max, scale,
-     classes = 3,
+     classes = 9,
      scheme = colorbrewer["YlOrRd"][classes];
 
  /* The function hex_style below determines a quantize scale (https://goo.gl/CfjNH3)
