@@ -84,7 +84,7 @@
      if (!(max && scale)) {
          max = d3.max(hexagons.data(), function (d) { return d.length; });
         //  window.alert(max);
-         scale = d3.scale.quantize()  // D3 also offers other ways to classify data: https://goo.gl/6DMHFe
+         scale = d3.scale.linear()  // D3 also offers other ways to classify data: https://goo.gl/6DMHFe
                    .domain([0, max])
                    .range(d3.range(classes));
      }
